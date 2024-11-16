@@ -17,9 +17,11 @@ function Hero() {
         {/* Hero Text Content */}
         <div className="hero-text">
           <h1>Plan Your Perfect Tour with Vihaara</h1>
-          <p>At Vihaara, we specialize in crafting personalized travel itineraries tailored<br></br> 
-          to your preferences. Discover the best tour packages and get recommendations for unforgettable 
-          travel experiences designed just for you.</p>
+          <p>
+            At Vihaara, we specialize in crafting personalized travel itineraries tailored<br />
+            to your preferences. Discover the best tour packages and get recommendations for unforgettable 
+            travel experiences designed just for you.
+          </p>
 
           <button className="btn-see-more">See more</button>
         </div>

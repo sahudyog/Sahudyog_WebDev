@@ -1,372 +1,218 @@
-/* General body and layout */
-body {
-  font-family: 'Arial', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
 }
 
-/* Top Navigation */
-.top-nav {
-  background-color: #2e3a59;
-  padding: 1rem 2rem;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Homepage Container */
+.homepage-container {
+  padding: 6rem 5%;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.home_navbar {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
-  z-index: 100; /* Ensure it stays above sidebar */
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: white;
+  color: black;
+  padding: 0 2rem;
 }
 
-.top-nav .logo a {
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-.top-nav .search-bar {
+.logo_container {
   display: flex;
   align-items: center;
 }
 
-.top-nav .search-bar input {
-  padding: 0.5rem;
-  margin-right: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.top-nav .search-bar button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 4px;
+.menu-icon {
+  font-size: 28px;
   cursor: pointer;
-  font-size: 1rem;
+  margin-right: 15px;
+  color: #007bff;
+  transition: color 0.3s ease;
 }
 
-.top-nav .icons button {
-  background: none;
-  border: none;
-  color: white;
+.menu-icon:hover {
+  color: #0056b3;
+}
+
+.website-name h1 {
   font-size: 1.5rem;
-  margin-left: 1rem;
-  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  color: #007bff;
 }
 
-.top-nav .toggle-sidebar {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  left: 20px;
+.user-details span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
 }
 
-/* Sidebar */
-.side-nav {
-  background-color: #2e3a59;
-  width: 260px;
-  padding-top: 1.5rem;
+/* Sidebar Styling */
+.sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -250px;
+  width: 250px;
   height: 100%;
+  background-color: #343a40;
   color: white;
-  font-size: 1.3rem;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  z-index: 50; /* Ensure sidebar stays under the top nav */
+  padding: 2rem 1rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
 }
 
-.side-nav.closed {
-  transform: translateX(-100%);
+.sidebar.open {
+  left: 0;
 }
 
-.side-nav ul {
+.sidebar ul {
   list-style-type: none;
-  padding-left: 0;
-}
-
-.side-nav ul li {
-  padding: 1.3rem;
-  transition: background-color 0.3s ease;
-}
-
-.side-nav ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.side-nav ul li:hover {
-  background-color: #3b4c72;
-}
-
-.side-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Main Content */
-.main-content {
-  margin-left: 0;  /* Start with no margin */
-  padding: 2rem;
-  margin-top: 80px; /* Add space for the fixed top navbar */
-  transition: margin-left 0.3s ease;
-  z-index: 1; /* Ensure content stays behind the navbar */
-}
-
-.side-nav.open + .main-content {
-  margin-left: 260px;
-}
-
-/* Stats Cards */
-.stats-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  width: calc(33% - 1rem);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  margin: 0;
-}
-
-.card p {
-  font-size: 1.2rem;
-}
-
-.card:hover {
-  background-color: #f0f0f0;
-}
-
-/* Tour Plan Section */
-#tour-plan p {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
-}
-
-#tour-plan h2 {
-  font-size: 2rem;
-}
-
-/* My Trips Section */
-.trip-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.trip-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  width: calc(25% - 1rem);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-}
-
-.trip-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.trip-actions button {
-  background-color: #ff4c4c;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.trip-actions button:hover {
-  background-color: #e04343;
-}
-
-/* Booking Section */
-.booking-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.booking-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  width: calc(25% - 1rem);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.booking-card button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.booking-card button:hover {
-  background-color: #45a049;
-}
-
-/* Explore Section */
-.explore-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.explore-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  width: calc(25% - 1rem);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.explore-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-/* Community Section */
-#community {
+  padding: 0;
   margin-top: 2rem;
 }
 
-#community h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.sidebar li {
+  margin-bottom: 1.5rem;
 }
 
-#community p {
-  font-size: 1.2rem;
-}
-
-/* Rewards Section */
-.reward-card {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-.reward-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.reward-card p {
-  font-size: 1.2rem;
-}
-
-.reward-card button {
-  background-color: #4CAF50;
+.sidebar a {
   color: white;
-  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #007bff;
+}
+
+/* Main Content Styling */
+.main-content {
+  padding: 2rem;
+  margin-top: 100px; /* Account for fixed navbar height */
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Create Trip Button */
+.create-trip-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.reward-card button:hover {
-  background-color: #45a049;
+.create-trip-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  .side-nav {
-    width: 220px;
-  }
-
-  .main-content {
-    margin-left: 220px;
-  }
-
-  .stats-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .trip-cards, .booking-options, .explore-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card, .trip-card, .booking-card, .explore-card {
-    width: 90%;
-  }
+/* Recommended Trips Section */
+.recommended-trips {
+  margin-top: 2rem;
 }
 
+.recommended-trips h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  font-family: 'Playfair Display', serif;
+}
+
+.trip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.trip-card {
+  flex: 1 1 calc(33% - 20px); /* Responsive layout for 3 cards per row */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.trip-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.trip-card h4 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.trip-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .side-nav {
+  .trip-cards {
+    flex-direction: column;
+  }
+
+  .sidebar {
     width: 200px;
   }
 
-  .main-content {
-    margin-left: 200px;
-  }
-
-  .stats-cards {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%;
+  .trip-card {
+    flex: 1 1 100%;
   }
 }
-
-@media (max-width: 480px) {
-  .side-nav {
-    width: 0;
-    transform: translateX(-100%);
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-
-  .top-nav .logo a {
-    font-size: 1.2rem;
-  }
-
-  .top-nav .search-bar input {
-    width: 70px;
-  }
-
-  .top-nav .toggle-sidebar {
-    font-size: 1.8rem;
-  }
-
-  .side-nav.open {
-    transform: translateX(0);
-  }
+.sidebar .close-icon {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
 }

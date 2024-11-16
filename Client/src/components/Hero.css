@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 .hero {
   position: relative;
   width: 100%;
@@ -29,12 +33,24 @@
 
 .hero-text {
   position: relative;
+  margin-left: 20px;
   color: rgb(240, 240, 240);
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
   padding: 0 20px;
+}
+
+.hero-text h1{
+  font-size: 70px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-text p{
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 /* Navbar styling */
@@ -83,14 +99,16 @@
 .about-section {
   padding: 50px 20px;
   background-color: #f4f4f4;
-  text-align: center;
+  text-align: start;
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   font-size: 18px;
   color: #333;
+  border-left: 2px solid #ff8c00;
+  padding: 0 20px;
 }
 
 /* Button Styling */

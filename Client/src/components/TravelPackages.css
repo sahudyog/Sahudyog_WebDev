@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 .recommendation {
-  padding: 3rem 1rem;
+  padding: 30px 60px;
   background-color: #f3f3f3;
   text-align: center;
 }
@@ -13,17 +18,16 @@
 
 .recommendation-cards {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .card {
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  padding: 2rem;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-  width: 220px;
+  width: 300px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;

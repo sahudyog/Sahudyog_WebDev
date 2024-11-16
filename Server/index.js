@@ -1,18 +1,20 @@
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+const { initializeApp, cert } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 const credentials = require('./serviceAccountKey.json');
-
-initializeApp({
-    credential: cert(credentials),
-    storageBucket: 'gs://anmol-shops.appspot.com'
-  });
-const db = getFirestore();
-
-const app = require("./app");
 const path = require('path');
 
+// Initialize Firebase Admin SDK
+initializeApp({
+    credential: cert(credentials),
+    storageBucket: 'gs://anmol-shops.appspot.com',
+});
+const db = getFirestore();
+
+const app = require('./app');
+
+// Start the server
 const port = 3000;
-const server = app.listen(port, () => {
-    console.log(`App running on the port ${port}`);
-    console.log(`App is live at http://localhost:${3000}`);
-})
+app.listen(port, () => {
+    console.log(`App running on port ${port}`);
+    console.log(`Visit: http://localhost:${port}`);
+});

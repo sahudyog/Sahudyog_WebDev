@@ -30,13 +30,36 @@ function Signup({ closeModals, openLogin }) {
     if (!validateEmail(email)) return setErrorMessage("Please enter a valid email.");
     if (!validatePhoneNumber(phoneNumber)) return setErrorMessage("Please enter a valid 10-digit phone number.");
     if (!gender) return setErrorMessage("Please select your gender.");
+    const validatePassword = (password) => {
+      // Check if the password is at least 6 characters long
+      if (password.length < 6) {
+        return false;
+      }
+    
+      // Optional: Check if password contains at least one lowercase letter
+      const hasLowercase = /[a-z]/.test(password);
+      const hasUppercase = /[A-Z]/.test(password);
+      const hasNumber = /[0-9]/.test(password);
+      
+      // Optional: Check if password contains at least one number
+      if (!hasLowercase || !hasUppercase || !hasNumber) {
+        return false;
+      }
+    
+      return true;
+    };
+
+    if (!validatePassword(password)) {
+      setErrorMessage("Password must be at least 6 characters long, include an uppercase letter, a lowercase letter, and a number.");
+      return;
+    }
     if (!validatePassword(password)) return setErrorMessage("Password must be at least 6 characters long.");
     if (password !== confirmPassword) return setErrorMessage("Passwords do not match.");
 
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/signup', {
+      const response = await fetch('/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
