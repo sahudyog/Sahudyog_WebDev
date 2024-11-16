@@ -1,0 +1,82 @@
+/* Container styling */
+.customer-review {
+  padding: 3rem 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.customer-review h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Card layout */
+.review-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #ff8c00;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.card p:last-of-type {
+  font-weight: bold;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* Rating stars */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.rating .star {
+  font-size: 1.5rem;
+  margin: 0 2px;
+}
+
+.rating .star.full {
+  color: #ffd700;
+}
+
+.rating .star.half {
+  color: #ffbf00;
+}
+
+.rating .star.empty {
+  color: #ccc;
+}
