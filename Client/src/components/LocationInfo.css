@@ -1,0 +1,34 @@
+.location-info {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+  }
+  
+  .location-info div {
+    text-align: center;
+  }
+  
+  .location-info p:first-child {
+    font-weight: bold;
+    color: #888;
+  }
+  
+  .location-info p:last-child {
+    font-size: 1.1rem;
+  }
+  
+  .btn-booking {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

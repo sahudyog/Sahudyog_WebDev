@@ -1,0 +1,90 @@
+.footer {
+  background-color: #2C3E50;
+  color: #fff;
+  padding: 1.5rem 1rem;  /* Reduced padding */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  max-width: 900px; /* Reduced max-width */
+  margin: 0 auto;
+}
+
+.footer-branding h2 {
+  font-size: 1.2rem; /* Smaller font size */
+  color: #ff8c00;
+  margin-bottom: 0.3rem;
+}
+
+.footer-branding p {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #ecf0f1;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;  /* Reduced gap */
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Allow sections to wrap if needed */
+}
+
+.footer-section {
+  max-width: 200px;
+  font-size: 0.9rem;  /* Smaller text */
+}
+
+.footer-section h3 {
+  color: #ff8c00;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+  color: #ecf0f1;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+
+.footer-section p:hover {
+  color: #ff8c00;
+}
+
+.footer form {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 5px; /* Rounded input */
+  border: none;
+  font-size: 0.9rem;
+}
+
+.footer button {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 0.5rem 0.8rem;  /* Reduced padding */
+  border: none;
+  border-radius: 5px;  /* Rounded button */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.footer button:hover {
+  background-color: #e67e22;
+}
+
+.footer-bottom {
+  margin-top: 1rem; /* Reduced margin */
+  font-size: 0.8rem; /* Smaller font size */
+  color: #ecf0f1;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

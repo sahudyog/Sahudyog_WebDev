@@ -1,0 +1,372 @@
+/* General body and layout */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+/* Top Navigation */
+.top-nav {
+  background-color: #2e3a59;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it stays above sidebar */
+}
+
+.top-nav .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.top-nav .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav .search-bar input {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.top-nav .search-bar button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.top-nav .icons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.top-nav .toggle-sidebar {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  left: 20px;
+}
+
+/* Sidebar */
+.side-nav {
+  background-color: #2e3a59;
+  width: 260px;
+  padding-top: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+  font-size: 1.3rem;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 50; /* Ensure sidebar stays under the top nav */
+}
+
+.side-nav.closed {
+  transform: translateX(-100%);
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.side-nav ul li {
+  padding: 1.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.side-nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.side-nav ul li:hover {
+  background-color: #3b4c72;
+}
+
+.side-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 0;  /* Start with no margin */
+  padding: 2rem;
+  margin-top: 80px; /* Add space for the fixed top navbar */
+  transition: margin-left 0.3s ease;
+  z-index: 1; /* Ensure content stays behind the navbar */
+}
+
+.side-nav.open + .main-content {
+  margin-left: 260px;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(33% - 1rem);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}
+
+/* Tour Plan Section */
+#tour-plan p {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+#tour-plan h2 {
+  font-size: 2rem;
+}
+
+/* My Trips Section */
+.trip-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trip-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(25% - 1rem);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.trip-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.trip-actions button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trip-actions button:hover {
+  background-color: #e04343;
+}
+
+/* Booking Section */
+.booking-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.booking-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(25% - 1rem);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.booking-card button:hover {
+  background-color: #45a049;
+}
+
+/* Explore Section */
+.explore-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.explore-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(25% - 1rem);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.explore-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Community Section */
+#community {
+  margin-top: 2rem;
+}
+
+#community h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#community p {
+  font-size: 1.2rem;
+}
+
+/* Rewards Section */
+.reward-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.reward-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.reward-card p {
+  font-size: 1.2rem;
+}
+
+.reward-card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reward-card button:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .side-nav {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trip-cards, .booking-options, .explore-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .trip-card, .booking-card, .explore-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-nav {
+    width: 0;
+    transform: translateX(-100%);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .top-nav .logo a {
+    font-size: 1.2rem;
+  }
+
+  .top-nav .search-bar input {
+    width: 70px;
+  }
+
+  .top-nav .toggle-sidebar {
+    font-size: 1.8rem;
+  }
+
+  .side-nav.open {
+    transform: translateX(0);
+  }
+}
