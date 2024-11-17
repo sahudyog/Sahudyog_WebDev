@@ -1,6 +1,6 @@
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
-const credentials = require('./serviceAccountKey.json');
+const credentials = require('./config/serviceAccountKey.json');
 const path = require('path');
 
 // Initialize Firebase Admin SDK
