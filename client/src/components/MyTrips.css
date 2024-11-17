@@ -1,0 +1,121 @@
+/* Updated Styling for Horizontal Rows */
+.trip-status-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .trip-category {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left; /* Align category titles to the left */
+  }
+  
+  .trip-cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent cards from wrapping */
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    padding-bottom: 10px;
+  }
+  
+  .trip-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .trip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image-container {
+    overflow: hidden;
+    height: 180px;
+  }
+  
+  .trip-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .trip-card:hover .trip-card-img {
+    transform: scale(1.1);
+  }
+  
+  .trip-card-details {
+    padding: 20px;
+    color: #333;
+  }
+  
+  .trip-id {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .trip-dates {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .trip-status {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .trip-cards-container {
+      overflow-x: auto;
+    }
+  
+    .trip-card {
+      min-width: 250px; /* Ensure smaller card widths for responsiveness */
+    }
+  }
+  
+  .bookmark-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .bookmark-btn.bookmarked {
+    background-color: #ff8c00;
+    color: white;
+  }
+  
+  .bookmarked .trip-card {
+    border: 2px solid #ff8c00;
+  }
+  
+  .like-btn {
+    background-color: #160e0e;
+    border: 2px solid #007bff;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .like-btn.liked {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .like-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  

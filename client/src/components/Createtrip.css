@@ -1,0 +1,187 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Navbar Styles */
+  .custom-navbar {
+    background-color: #768da3;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .custom-navbar .logo-container h1 {
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ecf0f1;
+  }
+  
+  .custom-navbar .account-icon {
+    cursor: pointer;
+  }
+  
+  .custom-navbar .account-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Sidebar Styles */
+  .custom-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-sidebar p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #2c3e50;
+  }
+  
+  .custom-sidebar p strong {
+    font-weight: bold;
+  }
+  
+  .custom-sidebar button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-sidebar button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Form Styles */
+  .wide-form {
+    max-width: 600px; /* Reduced width for form */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wide-form .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .wide-form .form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  
+  .wide-form .form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .wide-form .submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .wide-form .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .wide-form .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  /* Info Section Styles */
+  .info-section {
+    padding: 20px;
+    background-color: #ecf0f1;
+    margin-left: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .info-section p {
+    font-size: 14px;
+    color: #2c3e50;
+  }
+  
+  .info-section video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .create-trip-page {
+      flex-direction: column;
+    }
+  
+    .main-content {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .trip-form-section {
+      width: 100%;
+    }
+  
+    .info-section {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  /* Back Button Style */
+.back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-btn:hover {
+    background-color: #c0392b;
+  }
+  

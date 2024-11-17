@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5e99940.css",
+    "main.js": "/static/js/main.e7363550.js",
+    "static/js/453.82d2509b.chunk.js": "/static/js/453.82d2509b.chunk.js",
+    "static/media/WhatsApp Image 2024-11-17 at 00.52.41_3e6486a2.jpg": "/static/media/WhatsApp Image 2024-11-17 at 00.52.41_3e6486a2.47d84d3c0ccbb433c8e4.jpg",
+    "static/media/blue-green-patterned-background-vector_53876-63171.avif": "/static/media/blue-green-patterned-background-vector_53876-63171.d3feb97cb266df2cce95.avif",
+    "index.html": "/index.html",
+    "main.a5e99940.css.map": "/static/css/main.a5e99940.css.map",
+    "main.e7363550.js.map": "/static/js/main.e7363550.js.map",
+    "453.82d2509b.chunk.js.map": "/static/js/453.82d2509b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5e99940.css",
+    "static/js/main.e7363550.js"
+  ]
+}

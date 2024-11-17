@@ -1,0 +1,46 @@
+.local-guides-page {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .local-guides-page h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .guides-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .guide-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .guide-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .guide-card h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .guide-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  

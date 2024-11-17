@@ -1,0 +1,133 @@
+/* General Background and Text */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for readability */
+  }
+  
+  /* Headers and Section Titles */
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6 {
+    color: #ffbf00; /* Accent color for headings */
+  }
+  
+  /* Navbar */
+  body.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark navbar background */
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .navbar-links a {
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .navbar-links .btn-book {
+    background-color: #444;
+  }
+  
+  body.dark-mode .navbar-links .btn-book:hover {
+    background-color: #666;
+  }
+  
+  /* Hero Section */
+  body.dark-mode .hero {
+    background-color: #181818; /* Dark background for hero */
+  }
+  
+  body.dark-mode .hero-text {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .btn-see-more {
+    background-color: #444444; /* Darker button background */
+  }
+  
+  body.dark-mode .btn-see-more:hover {
+    background-color: #666666; /* Darker on hover */
+  }
+  
+  /* Video Overlay */
+  body.dark-mode .hero::before {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  }
+  
+  /* Recommendation Section */
+  body.dark-mode .recommendation {
+    background-color: #1a1a1a; /* Dark background */
+  }
+  
+  body.dark-mode .recommendation h2 {
+    color: #ffbf00;
+  }
+  
+  /* Cards Styling */
+  body.dark-mode .card {
+    background: linear-gradient(145deg, #2c2c2c, #333);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  body.dark-mode .card h3 {
+    color: #ffbf00;
+  }
+  
+  body.dark-mode .card p {
+    color: #bfbfbf;
+  }
+  
+  body.dark-mode .card p:last-of-type {
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .card::before {
+    background-color: #ffbf00;
+  }
+  
+  /* Buttons and Links */
+  body.dark-mode a,
+  body.dark-mode button {
+    color: #ffbf00;
+  }
+  
+  body.dark-mode a:hover,
+  body.dark-mode button:hover {
+    color: #ffdd33;
+  }
+  
+  /* About Section */
+  body.dark-mode .about-section {
+    background-color: #222;
+    color: #e0e0e0;
+  }
+  
+  /* Plan Tour Button */
+  body.dark-mode .plan-tour {
+    background-color: #444;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .plan-tour:hover {
+    background-color: #666;
+  }
+  
+  /* Footer */
+  body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+  }
+  
+  /* Form Inputs */
+  body.dark-mode input,
+  body.dark-mode textarea,
+  body.dark-mode select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode input::placeholder,
+  body.dark-mode textarea::placeholder {
+    color: #aaa;
+  }
