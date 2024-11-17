@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Auth.css';
 import { useNavigate } from 'react-router-dom';
+import Homepage from './HomePage';
 
 function Login({ closeModals, openSignup }) {
   const [email, setEmail] = useState('');

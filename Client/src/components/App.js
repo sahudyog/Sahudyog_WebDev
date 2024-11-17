@@ -17,6 +17,7 @@ import LocalGuides from './LocalGuides';
 import Dashboard from './Dashboard';
 import GuideSignup from './GuideSignup';
 import './App.css';
+// import { UserProvider } from './context/UserContext';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);

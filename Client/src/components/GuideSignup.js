@@ -63,8 +63,8 @@ function GuideSignup({ closeModals, openLogin }) {
         body: JSON.stringify({
           email,
           password,
-          fullName: name,
-          phoneNumber,
+          name,
+          phone: phoneNumber,
           gender,
           address,
           place,

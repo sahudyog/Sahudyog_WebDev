@@ -17,9 +17,9 @@ const Homepage = ({ username }) => {
       {/* Navbar */}
       <nav className="home_navbar">
         <div className="logo_container">
-          <a type="button" onClick={openBar} id="menu1" className="menu-icon">
+          <button type="button" onClick={openBar} id="menu1" className="menu-icon">
             <i className="bx bx-menu"></i>
-          </a>
+          </button>
           <div className="website-name">
             <h1>vihaara.com</h1>
           </div>
@@ -28,6 +28,11 @@ const Homepage = ({ username }) => {
           <span>Welcome, {username}</span>
         </div>
       </nav>
+
+      {/* Optional Banner */}
+      <div className={`home_banner ${sidebarOpen ? 'sidebar-open' : ''}`}>
+        {/* Add optional text or components here */}
+      </div>
 
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
